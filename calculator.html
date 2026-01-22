@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <script>
+        function adding(){
+            // let num1=0,num2=0,Result=0;
+            num1=Number.parseInt(document.calculator.num1.value);
+            num2=Number.parseInt(document.calculator.num2.value);
+            Result=num1+num2;
+            document.getElementById("Result").innerHTML="sum = "+Result;
+        }
+        function subtraction(){
+            // let num1=0,num2=0,Result=0;
+            num1=Number.parseInt(document.calculator.num1.value);
+            num2=Number.parseInt(document.calculator.num2.value);
+            Result=num1-num2;
+            document.getElementById("Result").innerHTML="subtraction = "+Result;
+        }
+        function multhiplication(){
+            // let num1=0,num2=0,Result=0;
+            num1=Number.parseInt(document.calculator.num1.value);
+            num2=Number.parseInt(document.calculator.num2.value);
+            Result=num1*num2;
+            document.getElementById("Result").innerHTML="multhiplication = "+Result;
+        }
+        function divide(){
+            // let num1=0,num2=0,Result=0;
+            num1=Number.parseInt(document.calculator.num1.value);
+            num2=Number.parseInt(document.calculator.num2.value);
+            Result=num1/num2;
+            document.getElementById("Result").innerHTML="divide = "+Result;
+        }
+    </script>
+    <style>
+        .bt{
+            height: 50px;
+            width: 50px;
+            color: black;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body bgcolor="coral">
+    <h2>SIMPLE CALCULATER</h2>
+    <form name="calculator">
+       <pre> <label for="num1">       First digit</label>
+        <input type="number" id="num1" name="screen" id="add" placeholder="enter digit 1" maxlength="50"/>
+        <label for="num2">Second digit</label>
+        <input type="number" id="num2" name="screen" id="add" placeholder="enter digit 2" maxlength="50"/>
+        </pre>
+        <input type="button" class="bt" value="+" onclick="adding()">&nbsp;&nbsp;
+        <input type="button" class="bt" value="-" onclick="subtraction()">&nbsp;&nbsp;
+        <input type="button" class="bt" value="*" onclick="multhiplication()">&nbsp;&nbsp;
+        <input type="button" class="bt" value="/" onclick="divide()">&nbsp;&nbsp;
+        <h2 id="Result"></h2>
+    </form>
+</body>
+</html>
